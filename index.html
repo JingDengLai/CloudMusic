@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta content="乐动听网页云音乐播放器" />
+		<title>乐动听云音乐</title>
+		<link rel="stylesheet" href="css/l-music.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="l-topbar">
+				<div class="l-top">
+					<div class="l-title">
+						<img src="img/419739214415755540.png" />
+					</div>
+					<div class="login-link">
+						<a href="javascript:;" v-on:click="login_ready">
+							<p>登录</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="login-model">
+				<div class="login-ready" v-bind:class="{'Block':login_ready_display}">
+					<div class="top">
+						<div class="title">
+							<p>登录</p>
+						</div>
+						<div class="icon">
+							<a href="javascript:;" v-on:click="login_ready">
+								<p>&chi;</p>
+							</a>
+						</div>
+					</div>
+					<div class="Home-foot">
+						<div class="login-button">
+							<button v-on:click="login_page">登录</button>
+						</div>
+						<div class="register-button">
+							<button v-on:click="register_page">注册</button>
+						</div>
+					</div>
+				</div>
+				<div class="login-page" v-bind:class="{'Block':login_page_display}">
+					<div class="top">
+						<div class="title">
+							<p>手机号登录</p>
+						</div>
+						<div class="icon">
+							<a href="javascript:;" v-on:click="login_page">
+								<p>&chi;</p>
+							</a>
+						</div>
+					</div>
+					<div class="login-foot">
+						<div class="login-foot-center">
+							<div>
+								<input type="text" placeholder="请输入手机号码" />
+							</div>
+							<div>
+								<input type="password" placeholder="请输入密码" />
+							</div>
+							<div class="a-button">
+								<a href="javascript:;">登录</a>
+							</div>
+						</div>
+						<div class="login-foot-foot">
+							<a href="javascript:;" v-on:click="register_page">
+								<p>没有账号？免费注册></p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="register-page" v-bind:class="{'Block':register_page_display}">
+					<div class="top">
+						<div class="title">
+							<p>注册</p>
+						</div>
+						<div class="icon">
+							<a href="javascript:;" v-on:click="register_page">
+								<p>&chi;</p>
+							</a>
+						</div>
+					</div>
+					<div class="register-foot">
+						<div class="register-foot-center">
+							<div class="register">
+								<p>手机号:</p>
+								<input type="text" placeholder="请输入手机号" />
+							</div>
+							<div class="register-password">
+								<p>密码:</p>
+								<input type="password" placeholder="设置登录密码" />
+							</div>
+							<div class="sumit-button">
+								<a>注册</a>
+							</div>
+						</div>
+						<div class="register-foot-foot" v-on:click="login_page">
+							<a href="javascript:;" >
+								<p>
+									<返回登录</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-content">
+				<div class="l-content-left">
+					<div>
+						<ul>
+							<li v-bind:class="[findMusic_display?'w-bgc':'s-bgc']" ><a href="#" v-on:click="findMusic">发现音乐</a></li>
+							<li v-bind:class="[myMusic_display?'w-bgc':'s-bgc']" ><a href="#" v-on:click="myMusic">我的音乐</a></li>
+							<li v-bind:class="[searchMusic_display?'w-bgc':'s-bgc']" ><a href="#" v-on:click="searchMusic">搜索</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="l-content-right">
+					<div class="findMusic" v-bind:class="{'Block':findMusic_display}">
+						<div class="language">
+							<h4><img src="img/language.png" />语种</h4>
+							<ul>
+								<li>华语</li>
+								<li>欧美</li>
+								<li>日语</li>
+								<li>韩语</li>
+							</ul>
+						</div>
+						<div class="style">
+							<h4><img src="img/style.png" />风格</h4>
+							<ul>
+								<li>流行</li>
+								<li>摇滚</li>
+								<li>民谣</li>
+								<li>电子</li>
+								<li>舞曲</li>
+								<li>说唱</li>
+								<li>轻音乐</li>
+								<li>爵士</li>
+								<li>乡村</li>
+								<li>古典</li>
+								<li>民族</li>
+								<li>英伦</li>
+								<li>流行</li>
+								<li>摇滚</li>
+								<li>民谣</li>
+								<li>电子</li>
+								<li>舞曲</li>
+								<li>说唱</li>
+								<li>轻音乐</li>
+								<li>爵士</li>
+								<li>乡村</li>
+								<li>古典</li>
+								<li>民族</li>
+								<li>英伦</li>
+							</ul>
+						</div>
+						<div class="years">
+							<h4><img src="img/years.png" />年代</h4>
+							<ul>
+								<li>2017</li>
+								<li>2016</li>
+								<li>2015</li>
+								<li>2014</li>
+								<li>2017</li>
+								<li>2016</li>
+								<li>2015</li>
+								<li>2014</li>
+								<li>2017</li>
+								<li>2016</li>
+								<li>2015</li>
+								<li>2014</li>
+								<li>2017</li>
+								<li>2016</li>
+								<li>2015</li>
+								<li>2014</li>
+								<li>2017</li>
+								<li>2016</li>
+								<li>2015</li>
+								<li>2014</li>
+							</ul>
+						</div>
+						<div class="singer">
+							<h4><img src="img/singer.png" />歌手</h4>
+							<ul>
+								<li>刘德华</li>
+								<li>张学友</li>
+								<li>黎明</li>
+								<li>郭富城</li>
+								<li>张惠妹</li>
+								<li>王菲</li>
+								<li>谢霆锋</li>
+								<li>张靓颖</li>
+								<li>霉霉</li>
+								<li>贾斯丁比伯</li>
+							</ul>
+						</div>
+						<div class="song-list">
+							<ul>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="song">
+										<div class="song-img">
+											<img src="http://p4.music.126.net/Q8A2VlmBwt_HJDV6YVN-Jg==/109951163098110994.jpg?param=130y130" />
+										</div>
+										<div class="song-name">
+											<p>2017 KBS가요대축제 Live</p>
+										</div>
+										<div class="song-writer">
+											<p>V.A</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="page">
+							<span class="pre"><</span>
+							<span class="current">1</span>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<span class="lue">...</span>
+							<a href="#">199</a>
+							<a href="#">200</a>
+							<a href="#">></a>
+						</div>
+					</div>
+					<div class="myMusic" v-bind:class="{'Block':myMusic_display}">
+						<!--<div class="w-login">
+							<h2>登录乐动听音乐</h2>
+							<div class="now-login">
+								<a href="#">立即登录</a>
+							</div>
+						</div>-->
+						<div class="y-login">
+							<div class="mysong-top">
+								<div class="mysong-top-content">
+									<div class="mysong-top-content-img">
+										<img src="http://p1.music.126.net/ZvS5hhTeXaMjFhg2FyZT2g==/3394192431831622.jpg?param=200y200" />
+									</div>
+									<div class="mysong-top-content-name">
+										<span>我喜欢的音乐</span>
+									</div>
+								</div>
+								<div class="song-num">
+									<span class="title">歌曲</span>
+									<span class="num">45首</span>
+								</div>
+							</div>
+							<div class="mysong-memu">
+								<table>
+									<tr>
+										<th width="100"></th>
+										<th width="350"><p>歌曲标题</p></th>
+										<th width="100"><p>时长</p></th>
+										<th width="100"><p>歌手</p></th>
+										<th width="160"><p>专辑</p></th>
+									</tr>
+									<tr>
+										<td></td>
+										<td>情非得以</td>
+										<td>3:04</td>
+										<td>庾澄庆</td>
+										<td>等等</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>情非得以</td>
+										<td>3:04</td>
+										<td>庾澄庆</td>
+										<td>等等</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>情非得以</td>
+										<td>3:04</td>
+										<td>庾澄庆</td>
+										<td>等等</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>情非得以</td>
+										<td>3:04</td>
+										<td>庾澄庆</td>
+										<td>等等</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>情非得以</td>
+										<td>3:04</td>
+										<td>庾澄庆</td>
+										<td>等等</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="searchMusic" v-bind:class="{'Block':searchMusic_display}">
+						<div class="searchBox">
+							<div class="searchAbout">
+								<input type="search" placeholder="请输入歌曲名/歌手/专辑名" />
+							</div>
+							<div class="searchButton">
+								<input type="button" value="搜索" />
+							</div>
+							<div class="input-meg" style="display: none;">
+								<ul>
+									<li>追光者</li>
+									<li>成都</li>
+									<li>小薇</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mysong-memu">
+							<table>
+								<tr>
+									<th width="100"></th>
+									<th width="350"><p>歌曲标题</p></th>
+									<th width="100"><p>时长</p></th>
+									<th width="100"><p>歌手</p></th>
+									<th width="160"><p>专辑</p></th>
+								</tr>
+								<tr>
+									<td></td>
+									<td>情非得以</td>
+									<td>3:04</td>
+									<td>庾澄庆</td>
+									<td>等等</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>情非得以</td>
+									<td>3:04</td>
+									<td>庾澄庆</td>
+									<td>等等</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>情非得以</td>
+									<td>3:04</td>
+									<td>庾澄庆</td>
+									<td>等等</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>情非得以</td>
+									<td>3:04</td>
+									<td>庾澄庆</td>
+									<td>等等</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>情非得以</td>
+									<td>3:04</td>
+									<td>庾澄庆</td>
+									<td>等等</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="playerBox">
+				<div class="player">
+					<div class="playerBar">
+						<audio v-bind:src="songList[index].songUrl" id="myMusic"></audio>
+						<div class="pre">
+							<img src="img/上一首.png" v-on:click="last_song"/>
+						</div>
+						<div class="pause" v-bind:class="{'Block':play_display}">
+							<img src="img/播放.png" v-on:click="music_play"/>
+						</div>
+						<div class="pause" v-bind:class="{'Block':pause_display}">
+							<img src="img/暂停.png" v-on:click="music_pause"/>
+						</div>
+						<div class="next">
+							<img src="img/下一首.png" v-on:click="next_song"/>
+						</div>
+						<div class="songImg">
+							<img v-bind:src="songList[index].songImg" />
+						</div>
+						<div class="playBarBox">
+							<div class="songName">
+								<p>说散就散</p>
+								<p>
+									<span>{{music_currentTime}}</span>/<span>{{music_duration}}</span>
+								</p>
+							</div>
+							<div class="playBar">
+								<div class="bar">
+									<div class="progress"></div>
+									<span id="bar"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="lyric" v-on:click="music_lyric">
+							<a href="#"><p>歌词</p></a>
+						</div>
+						<div class="lyric_page" v-bind:class="{'Block':lyric_display}">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script type="text/javascript" src="js/l-music.js"></script>
+	</body>
+</html>

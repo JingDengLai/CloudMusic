@@ -1,0 +1,589 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.Block{
+	display: none;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style-type: none;
+}
+/*头部标题模块*/
+.l-topbar{
+	width: 100%;
+	height: 70px;
+	background-color: #87CEFF;
+}
+
+.l-top{
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.l-title{
+	width: 200px;
+	height: 70px;
+}
+
+.l-title img{
+	height: 70px;
+}
+.l-title{
+	float: left;
+}
+.login-link{
+	float: right;
+}
+.login-link a{
+	text-decoration: none;
+}
+.login-link p{
+	line-height: 70px;
+	font-size: 18px;
+	color: #FFFAFA;
+}
+
+.login-link p:hover{
+	color: cornflowerblue;
+}
+
+/*登陆模块*/
+.login-model{
+	width: 550px;
+	left: 50%;
+	margin-left: -275px;
+	position: absolute;
+	top: 50%;
+	margin-top: -150px;
+	background-color: #FFFFFF;
+	z-index: 100;
+}
+.login-ready{
+	
+}
+.top{
+	height: 40px;
+    background-color: #3B3B3B;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.top .title{
+	float: left;
+	margin-left: 20px;
+}
+.top .title p,.top .icon p{
+	line-height: 40px;
+	color: #FFFFFF;
+}
+.top .icon{
+	float: right;
+	margin-right: 20px;
+}
+
+.login-ready .Home-foot{
+	height: 260px;
+	background-color: #FFFFFF;
+	border: 1px solid #D1D1D1;
+    -moz-box-shadow:0px 4px 13px #333333; 
+    -webkit-box-shadow:0px 4px 13px #333333; 
+    box-shadow:0px 4px 13px #333333;
+    border-radius: 0 0 10px 10px;
+}
+
+.login-foot{
+	background-color: #FFFFFF;
+	border: 1px solid #D1D1D1;
+    -moz-box-shadow:0px 4px 13px #333333; 
+    -webkit-box-shadow:0px 4px 13px #333333; 
+    box-shadow:0px 4px 13px #333333;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.login-foot input[type=text]{
+	margin-top: 40px;
+}
+.login-foot input[type=password]{
+	margin-top: 20px;
+}
+.login-foot input[type=text],.login-foot input[type=password]{
+	width: 250px;
+	height: 35px;
+	margin-left: 150px;
+}
+.login-foot .a-button{
+	text-align: center;
+	width: 250px;
+	line-height: 35px;
+	margin-left: 150px;
+	margin-top: 30px;
+	background-color: #A4D3EE;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.a-button i{
+	color: white;
+}
+.login-foot-center,.register-foot-center{
+	border-bottom: 1px solid #D1D1D1;
+	padding-bottom: 20px;
+}
+.login-foot-foot{
+	line-height: 40px;
+	float: right;
+	color: #D1D1D1;
+}
+.login-foot-foot a{
+	color: #ABABAB;
+	font-size: 14px;
+}
+
+.login-button,.register-button{
+	margin: 50px 125px;
+}
+.login-button button,.register-button button{
+	width: 300px;
+	height: 30px;
+}
+.register-foot{
+	background-color: #FFFFFF;
+	border: 1px solid #D1D1D1;
+    -moz-box-shadow:0px 4px 13px #333333; 
+    -webkit-box-shadow:0px 4px 13px #333333; 
+    box-shadow:0px 4px 13px #333333;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+.register-foot .register{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.register-foot p{
+	margin-bottom: 8px;
+}
+.register-foot .register,.register-foot .register-password{
+	margin-left: 150px;
+}
+.register-foot input[type=text],.register-foot input[type=password]{
+	width: 250px;
+	height: 35px;
+}
+.register-foot .sumit-button a{
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.register-foot .sumit-button{
+	text-align: center;
+	width: 250px;
+	line-height: 35px;
+	margin-left: 150px;
+	margin-top: 30px;
+	background-color: #A4D3EE;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.register-foot-foot{
+	line-height: 40px;
+	float: left;
+	color: #D1D1D1;
+}
+.register-foot-foot a{
+	color: 	#7EC0EE;
+	font-size: 14px;
+}
+
+/*中间显示模块*/
+.l-content{
+	width: 1000px;
+	border-left: 1px solid #D1D1D1;
+	border-bottom: 1px solid  #D1D1D1;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+
+.l-content-left,.l-content-right{
+	float: left;
+}
+
+.l-content-left{
+	width: 228px;
+	min-height: 700px;
+	border-top: 1px solid #D1D1D1;
+}
+
+.l-content-left ul li{
+	width: 100%;
+	list-style-type: none;
+	text-align: center;
+	line-height: 60px;
+	font-size: 18px;
+	
+}
+.l-content-left ul li:hover{
+	background-color: #D1D1D1;
+}
+
+.l-content-left ul li a{
+	color: #4876FF;
+}
+
+.s-bgc{
+	background-color:#A9A9A9;
+}
+
+.w-bgc{
+	background-color: #EDEDED;
+}
+
+/*.l-content-left ul li:nth-of-type(odd){
+	background-color: #7EC0EE;
+}*/
+
+/*中间右模块*/
+.l-content-right{
+	width: 768px;
+	min-height: 700px;
+	border: 1px solid #CDCDB4;
+}
+.language{
+	overflow: hidden;
+	margin-top: 40px;
+	border-top: 1px solid #D1D1D1;
+}
+.language h4,.language ul,.style h4,.style ul,.years h4,.years ul,.singer h4,.singer ul{
+	float: left;
+}
+.language h4 img,.style h4 img,.years h4 img,.singer h4 img{
+	width: 20px;
+	transform: translateY(4px);
+}
+.language h4{
+	width: 80px;
+	margin-top: 10px;
+	border-right: 1px solid #D1D1D1;
+	text-align: center;
+}
+.language ul{
+	width: 670px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.language ul li,.style ul li,.years ul li,.singer ul li{
+	display: inline-block;
+	width: 70px;
+	border-right: 1px solid #D1D1D1;
+	text-align: center;
+	font-size: 14px;
+}
+.style,.years,.singer{
+	overflow: hidden;
+}
+.style ul,.years ul,.singer ul{
+	width: 670px;
+	overflow: hidden;
+	border-left: 1px solid #D1D1D1;
+	padding-top: 20px;
+}
+.singer{
+	border-bottom: 1px solid #D1D1D1;
+}
+.singer ul{
+	padding-bottom: 20px;
+}
+
+.style h4,.years h4,.singer h4{
+	margin-top: 20px;
+	width: 80px;
+	text-align: center;
+}
+
+.song-list li{
+	display: inline-block;
+	margin: 30px 0 0 45px;
+}
+
+.song-name p{
+	width: 130px;
+	white-space:nowrap;  
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	font-size: 16px;
+}
+
+.song-writer p{
+	width: 130px;
+	font-size: 14px;
+	color: #ABABAB;
+}
+
+/*分页特效*/
+ .page a{  
+	border: 1px solid #ABABAB;  
+	padding: 5px 5px;  
+	text-decoration: none;  
+	color: black;  
+    }  
+.page .lue {  
+    color: #ABABAB;  
+    }  
+.page .current{  
+    color:#ff9600;  
+    border:1px solid #ff9600;  
+    padding:5px 5px;  
+    background: #ffbe94;  
+}  
+.page .pre{  
+    border:1px solid #ffe3c6;  
+    color: #ffe3c6;  
+    padding:5px 5px;  
+}  
+.page{  
+	margin: 30px 0 30px 0;
+    text-align: center;  
+}  
+
+
+/*我的音乐模块*/
+
+/*未登录模块*/
+.myMusic .w-login{
+	width: 100%;
+	height: 268px;
+	background-image: url(../img/bg.png);
+	background-size: 100% 100%;
+	margin-top: 80px;
+	overflow: hidden;
+}
+.myMusic .w-login h2{
+ 	margin: 50px 0 0 440px;
+ 	color: #3B3B3B;
+}
+.myMusic .w-login .now-login{
+	margin: 120px 0 0 440px;
+	width: 140px;
+	background-color: #6A5ACD;
+	border-radius: 7px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	
+}
+
+.myMusic .w-login .now-login a{	
+	color: #FFFFFF;
+}
+
+/*已登录模块*/
+
+.mysong-top{
+	border-bottom: 2px solid saddlebrown;
+}
+.mysong-top-content{
+	width: 680px;
+	margin: 40px auto;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+.mysong-top-content div{
+	float: left;
+}
+.mysong-top-content .mysong-top-content-name{
+	margin: 10px 0 0 30px;
+}
+
+.song-num{
+	width: 680px;
+	margin: 0 auto;
+}
+.song-num .title{
+	font-size: 26px;
+}
+.song-num .num{
+	font-size: 14px;
+	color: #CDCDB4;
+}
+
+.mysong-memu table{
+	border-collapse: collapse;
+}
+.mysong-memu table th{
+	color: #3B3B3B;
+	border-right: 1px solid #ABABAB;
+	border-bottom: 1px solid #ABABAB;
+	font-size: 14px;
+	text-align: left;
+	height: 30px;
+	background-color: #EDEDED;
+}
+.mysong-memu table td{
+	text-align: left;
+	font-size: 13px;
+	height: 30px;
+	opacity: .6;
+}
+
+/*搜索页面样式*/
+.searchBox{
+	width: 600px;
+	margin: 40px auto;
+	overflow: hidden;
+}
+.searchBox .searchAbout,.searchBox .searchButton{
+	float: left;
+}
+
+.searchBox .input-meg{
+	position: absolute;
+	margin-top: 40px;
+	width: 400px;
+	background: #F5F5F5;
+}
+
+.searchBox .searchAbout input{
+	width: 400px;
+	height: 40px;
+}
+.searchBox .searchButton input{
+	width: 100px;
+	height: 40px;
+	margin-left: 20px;
+}
+
+.input-meg li{
+	width: 400px;
+	padding: 8px 0;
+	border-bottom: 1px solid #FFFFFF;
+	font-family: "仿宋";
+	font-size: 16px;
+}
+
+
+
+/*播放器样式*/
+.playerBox{
+	width: 100%;
+	height: 50px;
+	background-color: #7EC0EE;
+	position: fixed;
+	bottom: 0;
+	overflow: hidden;
+}
+
+.player{
+	width: 1000px;
+	height: 50px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.playerBar{
+	width: 1000px;
+	height: 35px;
+	margin-top: 7.5px;
+	overflow: hidden;
+}
+.playerBar .pre,.playerBar .pause,.playerBar .next,.playerBar .songImg,.playerBar .playBarBox,.lyric{
+	float: left;
+	margin-right: 10px;
+	opacity: 0.8;
+}
+.playerBar .pre:hover,.playerBar .pause:hover,.playerBar .next:hover,.playerBar .songImg:hover,.playerBar .playBarBox:hover{
+	opacity: 1;
+}
+
+.playerBar img:hover,.playBarBox .playBar .bar span:hover{
+	cursor: pointer;
+}
+
+.playerBar .pre img,.playerBar .next img{
+	height: 30px;
+	margin-top: 2.5px;
+}
+.playerBar .pause img{
+	height: 35px;
+}
+.playerBar .songImg{
+	margin-top: 2.5px;
+	margin-left: 20px;
+}
+.playerBar .songImg img{
+	height: 30px;
+	
+}
+.playBarBox .songName{
+	overflow: hidden;
+}
+.playBarBox .songName p:first-child{
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.playBarBox .songName p:last-child{
+	float: right;
+	font-size: 14px;
+	color: #000000;
+	margin-bottom: 5px;
+}
+.playBarBox .playBar .bar{
+	width: 500px;
+	height: 10px;
+	background-color: darkgrey;
+	border-radius: 5px;
+}
+
+.playBarBox .playBar .bar .progress{
+	width: 0;
+	height: 10px;
+	border-radius: 5px;
+	background-color: red;
+}
+
+.playBarBox .playBar .bar span{
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	z-index: 20;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	top: -12.5px;
+	left: -5px;
+}
+.playBarBox .playBar .bar span i{
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: #FFFFFF;
+	margin: 5px auto;
+	border-radius: 50%;
+}
+
+.lyric{
+	margin:5px 0 0 100px;
+	font-size: 18px;
+	background-color: #87CEFF;
+}
+.lyric p{
+	color: firebrick;
+}
+
+.lyric_page{
+	width: 200px;
+	height: 400px;
+	position: fixed;
+	bottom: 50px;
+	right: 330px;
+	background-color: #FFFAFA;
+}
